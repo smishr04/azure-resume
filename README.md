@@ -4,7 +4,7 @@ My own azure resume, following [ACG project video.](https://youtu.be/ieYrBWmkfno
 
 ## Demo
 
-[View it live here](https://www.gwynethpena.com)
+[View it live here](https://www.sanjivmishra.co.in)
 
 ## Structure
 
