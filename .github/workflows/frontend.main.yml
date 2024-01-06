@@ -16,6 +16,7 @@ jobs:
     - name: login with azure
       uses: azure/login@v1
       with:
+          enable-AzPSSession: true
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Upload to blob storage
