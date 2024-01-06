@@ -11,7 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+    - name: login with azure
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -19,11 +20,13 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.30.0
         inlineScript: |
             az storage blob upload-batch --account-name stazureresume -d '$web' -s frontend/ --overwrite
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.30.0
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "cdn-azure-resume" --name "sanjivazureresume" --resource-group "rg-azure-resume"
 
