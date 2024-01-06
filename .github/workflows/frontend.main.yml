@@ -27,7 +27,7 @@ jobs:
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "cdn-azure-resume" --name "sanjivazureresume" --resource-group "rg-azure-resume"
 
-  # Azure logout
+  ## Azure logout
     - name: logout
       run: |
             az logout
