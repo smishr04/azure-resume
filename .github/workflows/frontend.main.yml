@@ -16,6 +16,7 @@ jobs:
     - name: login with azure
       uses: azure/login@v1
       with:
+          azcliversion: 2.30.0
           enable-AzPSSession: true
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
